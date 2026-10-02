@@ -1,0 +1,12 @@
+# Every change is reviewed by a maintainer.
+* @innerluxesdev
+
+# The tables come from Apple's documentation, and the readers and the detection decide every line of the report; changes need extra care.
+/src/data.js @innerluxesdev
+/research/ @innerluxesdev
+/src/xml.js @innerluxesdev
+/src/plist.js @innerluxesdev
+/src/manifest.js @innerluxesdev
+/src/detect.js @innerluxesdev
+/src/scan.js @innerluxesdev
+/src/check.js @innerluxesdev
