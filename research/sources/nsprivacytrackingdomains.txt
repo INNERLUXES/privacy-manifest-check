@@ -1,0 +1,10 @@
+Source: https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacytrackingdomains
+Data: https://developer.apple.com/tutorials/data/documentation/bundleresources/app-privacy-configuration/nsprivacytrackingdomains.json
+Text taken from the page data: markup is flattened and links are shown by their titles.
+
+# NSPrivacyTrackingDomains
+A list of the internet domains your app or third-party SDK uses for tracking.
+Key: NSPrivacyTrackingDomains type: [{"arrayMode":true,"baseType":"string "}]
+
+## Overview
+If the user has not granted tracking permission through the App Tracking Transparency framework, network requests to these domains fail and your app receives an error. To provide a list of internet domains in `NSPrivacyTrackingDomains`, set NSPrivacyTracking to `true`. For more information, see User Privacy and Data Use.

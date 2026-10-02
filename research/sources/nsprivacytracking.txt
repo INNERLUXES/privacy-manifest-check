@@ -1,0 +1,11 @@
+Source: https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacytracking
+Data: https://developer.apple.com/tutorials/data/documentation/bundleresources/app-privacy-configuration/nsprivacytracking.json
+Text taken from the page data: markup is flattened and links are shown by their titles.
+
+# NSPrivacyTracking
+A Boolean value that indicates whether your app or third-party SDK uses data for tracking.
+Key: NSPrivacyTracking type: [{"arrayMode":false,"baseType":"boolean"}]
+[attributes] [{"kind":"default","value":"false"}]
+
+## Overview
+Set the value for this key to `true` if your app or third-party SDK uses data for tracking as defined under the App Tracking Transparency framework. When set to `true` you need to provide a list of internet domains in NSPrivacyTrackingDomains. For more information, see User Privacy and Data Use.

@@ -1,0 +1,19 @@
+Source: https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacycollecteddatatypes/nsprivacycollecteddatatypepurposes
+Data: https://developer.apple.com/tutorials/data/documentation/bundleresources/app-privacy-configuration/nsprivacycollecteddatatypes/nsprivacycollecteddatatypepurposes.json
+Text taken from the page data: markup is flattened and links are shown by their titles.
+
+# NSPrivacyCollectedDataTypePurposes
+An array of strings that identify reasons your app or third-party SDK collects private data.
+Key: NSPrivacyCollectedDataTypePurposes type: [{"arrayMode":true,"baseType":"string "}]
+### value NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising
+Third-party advertising; such as displaying third-party ads in your app, or sharing data with entities who display third-party ads.
+### value NSPrivacyCollectedDataTypePurposeDeveloperAdvertising
+Developer’s advertising or marketing; such as displaying first-party ads in your app, sending marketing communications directly to your users, or sharing data with entities who will display your ads.
+### value NSPrivacyCollectedDataTypePurposeAnalytics
+Analytics — using data to evaluate user behavior, including to understand the effectiveness of existing product features, plan new features, or measure audience size or characteristics.
+### value NSPrivacyCollectedDataTypePurposeProductPersonalization
+Product personalization — customizing what the user sees, such as a list of recommended products, posts, or suggestions.
+### value NSPrivacyCollectedDataTypePurposeAppFunctionality
+App functionality; such as to authenticate the user, enable features, prevent fraud, implement security measures, ensure server up-time, minimize app crashes, improve scalability and performance, or perform customer support.
+### value NSPrivacyCollectedDataTypePurposeOther
+Any other purposes not listed.

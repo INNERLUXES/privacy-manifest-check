@@ -1,0 +1,10 @@
+Source: https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacycollecteddatatypes/nsprivacycollecteddatatypelinked
+Data: https://developer.apple.com/tutorials/data/documentation/bundleresources/app-privacy-configuration/nsprivacycollecteddatatypes/nsprivacycollecteddatatypelinked.json
+Text taken from the page data: markup is flattened and links are shown by their titles.
+
+# NSPrivacyCollectedDataTypeLinked
+A Boolean that indicates whether your app or third-party SDK links this data type to the user’s identity.
+Key: NSPrivacyCollectedDataTypeLinked type: [{"arrayMode":false,"baseType":"boolean"}]
+
+## Discussion
+For more information, see Data linked to the user in App privacy details on the App Store.

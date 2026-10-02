@@ -1,0 +1,7 @@
+Source: https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacycollecteddatatypes/nsprivacycollecteddatatypetracking
+Data: https://developer.apple.com/tutorials/data/documentation/bundleresources/app-privacy-configuration/nsprivacycollecteddatatypes/nsprivacycollecteddatatypetracking.json
+Text taken from the page data: markup is flattened and links are shown by their titles.
+
+# NSPrivacyCollectedDataTypeTracking
+A Boolean that indicates whether your app or third-party SDK uses this data type to track.
+Key: NSPrivacyCollectedDataTypeTracking type: [{"arrayMode":false,"baseType":"boolean"}]

@@ -1,0 +1,50 @@
+{
+  "name": "privacy-manifest-check",
+  "version": "1.0.0",
+  "description": "Check the privacy manifests (PrivacyInfo.xcprivacy) of an iOS, iPadOS or watchOS app or SDK project against the required reason API its Swift and Objective-C code calls: categories used but not declared, missing or invalid reason codes, tracking settings that disagree, incomplete collected data types. Reads files only; never runs Xcode or a build, no dependencies.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "privacy-manifest-check": "bin/privacy-manifest-check.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "examples",
+    "research",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "test:coverage": "node --test --experimental-test-coverage \"test/*.test.js\"",
+    "check": "node tools/check.mjs",
+    "example": "node tools/example.mjs"
+  },
+  "keywords": [
+    "ios",
+    "ipados",
+    "watchos",
+    "privacy",
+    "privacy-manifest",
+    "xcprivacy",
+    "required-reason-api",
+    "app-store",
+    "tracking",
+    "cli"
+  ],
+  "author": "INNERLUXES <info@innerluxes.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INNERLUXES/privacy-manifest-check.git"
+  },
+  "homepage": "https://innerluxes.dev/application/mobile/development"
+}
