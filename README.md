@@ -187,7 +187,7 @@ The tool matches names in text. It does not compile the code, so it does not kno
 
 ## Background
 
-- How mobile apps are built and prepared for the store, with checks like this one in the pipeline: [mobile application development](https://innerluxes.dev/application/mobile/development).
+- How iOS apps are built and prepared for App Store review, with checks like this one in the pipeline: [iOS app development](https://innerluxes.dev/application/mobile/development/ios).
 
 ## License
 
