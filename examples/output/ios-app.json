@@ -1,0 +1,104 @@
+{
+  "tool": "privacy-manifest-check",
+  "version": "1.0.0",
+  "folder": "examples/ios-app",
+  "scanned": {
+    "sources": 3,
+    "withApis": 3
+  },
+  "manifests": [
+    {
+      "file": "examples/ios-app/OrdersApp/PrivacyInfo.xcprivacy",
+      "readable": true,
+      "tracking": false,
+      "trackingDomains": 0,
+      "dataTypes": 1,
+      "apiCategories": [
+        "NSPrivacyAccessedAPICategoryUserDefaults",
+        "NSPrivacyAccessedAPICategoryDiskSpace"
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "category": "NSPrivacyAccessedAPICategoryFileTimestamp",
+      "name": "File timestamp",
+      "declared": false,
+      "calls": 2,
+      "files": 2,
+      "uses": [
+        {
+          "file": "examples/ios-app/OrdersApp/Legacy/OrderSync.m",
+          "line": 17,
+          "symbol": "NSFileModificationDate"
+        },
+        {
+          "file": "examples/ios-app/OrdersApp/Sources/ReceiptCache.swift",
+          "line": 17,
+          "symbol": "modificationDate"
+        }
+      ]
+    },
+    {
+      "category": "NSPrivacyAccessedAPICategoryUserDefaults",
+      "name": "User defaults",
+      "declared": true,
+      "calls": 2,
+      "files": 2,
+      "uses": [
+        {
+          "file": "examples/ios-app/OrdersApp/Legacy/OrderSync.m",
+          "line": 12,
+          "symbol": "NSUserDefaults"
+        },
+        {
+          "file": "examples/ios-app/OrdersApp/Sources/SettingsStore.swift",
+          "line": 5,
+          "symbol": "UserDefaults"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "error": 1,
+    "warning": 1,
+    "info": 1
+  },
+  "findings": [
+    {
+      "id": "undeclared-api",
+      "severity": "error",
+      "file": "examples/ios-app/OrdersApp/Legacy/OrderSync.m",
+      "line": 17,
+      "subject": "NSPrivacyAccessedAPICategoryFileTimestamp",
+      "message": "File timestamp API (NSFileModificationDate, modificationDate) is called 2 times in 2 files, first here, and no PrivacyInfo.xcprivacy declares NSPrivacyAccessedAPICategoryFileTimestamp",
+      "fix": "Add an NSPrivacyAccessedAPITypes entry for NSPrivacyAccessedAPICategoryFileTimestamp with the reason that matches the use. Apple lists: DDA9.1, C617.1, 3B52.1, 0A2A.1"
+    },
+    {
+      "id": "data-type-incomplete",
+      "severity": "warning",
+      "file": "examples/ios-app/OrdersApp/PrivacyInfo.xcprivacy",
+      "line": 11,
+      "subject": "NSPrivacyCollectedDataTypeEmailAddress",
+      "message": "NSPrivacyCollectedDataTypeEmailAddress lacks NSPrivacyCollectedDataTypeTracking, NSPrivacyCollectedDataTypePurposes",
+      "fix": "Give every collected data type its Linked and Tracking booleans and at least one purpose"
+    },
+    {
+      "id": "unused-category",
+      "severity": "info",
+      "file": "examples/ios-app/OrdersApp/PrivacyInfo.xcprivacy",
+      "line": 29,
+      "subject": "NSPrivacyAccessedAPICategoryDiskSpace",
+      "message": "Disk space (NSPrivacyAccessedAPICategoryDiskSpace) is declared, and no scanned code calls it",
+      "fix": "Remove the entry if no code or linked SDK in this target calls the API; keep it if the call is in code this scan does not read (a precompiled library, another language)"
+    }
+  ],
+  "notes": [
+    "left out 1 kind of folder (Pods); use --include-deps to read them"
+  ],
+  "gate": {
+    "failOn": "error",
+    "pass": false,
+    "reason": "1 error"
+  }
+}
